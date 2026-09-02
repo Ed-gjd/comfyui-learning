@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "title": "雪院回眸",
+    "genre": "古风短剧 demo",
+    "character": "sxgirl（L4 训练 LoRA 触发词）",
+    "aspect": "9:16",
+    "total_duration": 20,
+    "shots": 5,
+    "created": "2026-08-08"
+  },
+  "shots": [
+    {
+      "id": "s01",
+      "scene": "竹林",
+      "shot": "中景 · 练剑",
+      "prompt": "sxgirl, a graceful young Chinese woman in flowing white hanfu practicing a sword in a misty bamboo forest, dynamic pose, golden sunlight through bamboo, wuxia, cinematic lighting, highly detailed, best quality",
+      "dialogue": "（剑鸣声，无对白）",
+      "duration": 4,
+      "motion": "slow push in",
+      "style": "古风 / wuxia / cinematic"
+    },
+    {
+      "id": "s02",
+      "scene": "茶舍",
+      "shot": "近景 · 饮茶",
+      "prompt": "sxgirl, a young Chinese woman in hanfu sitting at a wooden table in an ancient tea house, holding a tea cup, warm lantern light, steam rising from the cup, serene expression, cinematic, highly detailed",
+      "dialogue": "来，尝尝今春的茶。",
+      "duration": 4,
+      "motion": "static, subtle",
+      "style": "古风 / warm / cinematic"
+    },
+    {
+      "id": "s03",
+      "scene": "古桥",
+      "shot": "全景 · 眺望",
+      "prompt": "sxgirl, a young Chinese woman in hanfu standing on an ancient stone bridge overlooking a river, wind blowing her hair and sleeves, late afternoon light, vast landscape, cinematic composition, highly detailed",
+      "dialogue": "（内心独白）山高水长，后会无期……",
+      "duration": 4,
+      "motion": "slow pan right",
+      "style": "古风 / landscape / cinematic"
+    },
+    {
+      "id": "s04",
+      "scene": "樱花",
+      "shot": "特写 · 接花瓣",
+      "prompt": "sxgirl, a young Chinese woman in hanfu walking under falling cherry blossom petals, reaching out to catch a petal, soft pink light, shallow depth of field, close up, cinematic, highly detailed",
+      "dialogue": "又一年花开了。",
+      "duration": 4,
+      "motion": "close-up, slow zoom",
+      "style": "古风 / soft / cinematic"
+    },
+    {
+      "id": "s05",
+      "scene": "雪院",
+      "shot": "中近景 · 回眸",
+      "prompt": "sxgirl, a young Chinese woman in red hanfu turning back over her shoulder in a snow-covered courtyard, falling snow, subtle smile, cold winter light, cinematic close up, highly detailed, best quality",
+      "dialogue": "（笑）下次，还在这里见。",
+      "duration": 4,
+      "motion": "slow pull out",
+      "style": "古风 / winter / cinematic"
+    }
+  ]
+}

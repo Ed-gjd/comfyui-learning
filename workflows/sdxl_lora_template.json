@@ -1,0 +1,55 @@
+{
+  "note": "SDXL + 主角 LoRA 出图模板（API 格式）。占位符由 batch_generate.py 逐镜头注入：__PROMPT__ / __SEED__ / __PREFIX__",
+  "checkpoint": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {"ckpt_name": "sd_xl_base_1.0.safetensors"}
+  },
+  "lora": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": ["checkpoint", 0],
+      "clip": ["checkpoint", 1],
+      "lora_name": "hongyi_lora.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8
+    }
+  },
+  "pos": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {"text": "__PROMPT__", "clip": ["lora", 1]}
+  },
+  "neg": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "blurry, low quality, distorted, ugly, deformed hands, extra fingers, watermark, text",
+      "clip": ["lora", 1]
+    }
+  },
+  "latent": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {"width": 832, "height": 1216, "batch_size": 1}
+  },
+  "sampler": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": "__SEED__",
+      "steps": 30,
+      "cfg": 6,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": ["lora", 0],
+      "positive": ["pos", 0],
+      "negative": ["neg", 0],
+      "latent_image": ["latent", 0]
+    }
+  },
+  "vae": {
+    "class_type": "VAEDecode",
+    "inputs": {"samples": ["sampler", 0], "vae": ["checkpoint", 2]}
+  },
+  "save": {
+    "class_type": "SaveImage",
+    "inputs": {"filename_prefix": "__PREFIX__", "images": ["vae", 0]}
+  }
+}

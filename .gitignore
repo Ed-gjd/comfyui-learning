@@ -1,0 +1,12 @@
+# 大模型/训练产物（218MB LoRA + 训练素材）
+*.safetensors
+images/lora/
+images/char_dataset/
+
+# 大图批量（单张 5-6MB）
+images/flux2_modern/
+images/modern_scenes/
+images/all_images/
+images/lora_test/
+images/instantid_test/
+images/flux2_test/

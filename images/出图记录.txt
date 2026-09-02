@@ -1,0 +1,26 @@
+AutoDL 云端 ComfyUI 出图记录
+日期: 2026-08-08
+实例: tzwm 整合包 (comfyui) / vGPU-32GB (RTX 4080) / ¥1.77时
+模型: v1-5-pruned-emaonly.safetensors (SD1.5, 4GB)
+后端: ComfyUI v0.3.62 / 端口 6006 / 隧道 localhost:8190
+负向词(通用): blurry, low quality, distorted, ugly, watermark
+采样: euler / normal / 22步 / CFG 7
+
+1. l3_first_00001_.png (512×512, seed 20260808)
+   正向: a beautiful young woman in a red hanfu standing in an ancient Chinese courtyard, golden hour lighting, cinematic, highly detailed, best quality
+
+2. scene_古风剑客_00001_.png (512×768, seed 101)
+   正向: a swordsman in white robes standing on a mountain peak at dawn, misty clouds, wuxia style
+
+3. scene_霓虹都市_00001_.png (512×768, seed 202)
+   正向: a woman in a trench coat walking on a rainy neon-lit city street at night, cyberpunk, cinematic
+
+4. scene_梦幻森林_00001_.png (512×768, seed 303)
+   正向: a magical forest with glowing mushrooms and fireflies, fairy tale, dreamy atmosphere
+
+5. scene_科幻未来_00001_.png (512×768, seed 404)
+   正向: a futuristic city with flying cars at sunset, sci-fi concept art, epic scale
+
+6. timed_test_00001_.png (512×512, seed 777, 22步)
+   正向: a red fox in snow, wildlife photography
+   单张耗时实测: 2.2s

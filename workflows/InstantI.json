@@ -1,0 +1,31 @@
+{
+  "last_node_id": 12,
+  "last_link_id": 11,
+  "nodes": [
+    {"id":1,"type":"CheckpointLoaderSimple","pos":[40,300],"size":[300,80],"inputs":[],"outputs":[{"name":"MODEL"},{"name":"CLIP"},{"name":"VAE"}],"widgets_values":["sd_xl_base_1.0.safetensors"]},
+    {"id":2,"type":"InstantIDModelLoader","pos":[40,150],"size":[300,60],"inputs":[],"outputs":[{"name":"INSTANTID"}],"widgets_values":["ip-adapter.bin"]},
+    {"id":3,"type":"InstantIDFaceAnalysis","pos":[40,30],"size":[300,60],"inputs":[],"outputs":[{"name":"FACEANALYSIS"}],"widgets_values":["CUDA"]},
+    {"id":4,"type":"ControlNetLoader","pos":[400,150],"size":[300,60],"inputs":[],"outputs":[{"name":"CONTROL_NET"}],"widgets_values":["ControlNetModel.safetensors"]},
+    {"id":5,"type":"LoadImage","pos":[40,430],"size":[300,300],"inputs":[],"outputs":[{"name":"IMAGE"},{"name":"MASK"}],"widgets_values":["portrait_base.png"]},
+    {"id":6,"type":"CLIPTextEncode","pos":[400,300],"size":[300,100],"inputs":[{"name":"clip","link":2}],"outputs":[{"name":"CONDITIONING"}],"widgets_values":["a young Chinese woman, standing in a blooming garden, full body, high quality"]},
+    {"id":7,"type":"CLIPTextEncode","pos":[400,430],"size":[300,100],"inputs":[{"name":"clip","link":2}],"outputs":[{"name":"CONDITIONING"}],"widgets_values":["blurry, low quality, distorted, ugly"]},
+    {"id":8,"type":"ApplyInstantID","pos":[760,300],"size":[300,180],"inputs":[{"name":"instantid","link":4},{"name":"insightface","link":5},{"name":"control_net","link":6},{"name":"image","link":7},{"name":"model","link":1},{"name":"positive","link":8},{"name":"negative","link":9}],"outputs":[{"name":"MODEL"},{"name":"positive"},{"name":"negative"}],"widgets_values":[0.8,0.0,1.0]},
+    {"id":9,"type":"EmptyLatentImage","pos":[760,60],"size":[300,100],"inputs":[],"outputs":[{"name":"LATENT"}],"widgets_values":["1024","1024","1"]},
+    {"id":10,"type":"KSampler","pos":[1120,200],"size":[300,200],"inputs":[{"name":"model","link":10},{"name":"positive","link":11},{"name":"negative","link":12},{"name":"latent_image","link":13}],"outputs":[{"name":"LATENT"}],"widgets_values":[7000,30,3.5,"dpmpp_2m","karras",1.0]},
+    {"id":11,"type":"VAEDecode","pos":[1480,200],"size":[300,60],"inputs":[{"name":"samples","link":14},{"name":"vae","link":15}],"outputs":[{"name":"IMAGE"}]},
+    {"id":12,"type":"SaveImage","pos":[1820,200],"size":[300,60],"inputs":[{"name":"images","link":16}],"outputs":[],"widgets_values":["instantid_test"]}
+  ],
+  "links": [
+    [1,1,0,8,3,"MODEL"], [2,1,1,6,0,"CLIP"], [3,1,1,7,0,"CLIP"],
+    [4,2,0,8,0,"INSTANTID"], [5,3,0,8,1,"FACEANALYSIS"],
+    [6,4,0,8,2,"CONTROL_NET"], [7,5,0,8,3,"IMAGE"],
+    [8,6,0,8,5,"CONDITIONING"], [9,7,0,8,6,"CONDITIONING"],
+    [10,8,0,10,0,"MODEL"], [11,8,1,10,1,"positive"], [12,8,2,10,2,"negative"],
+    [13,9,0,10,3,"LATENT"], [14,10,0,11,0,"LATENT"],
+    [15,1,2,11,1,"VAE"], [16,11,0,12,0,"IMAGE"]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

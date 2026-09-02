@@ -1,0 +1,105 @@
+{
+  "note": "LTX-2.3 图生视频工作流（s05 雪院回眸 demo）· 97帧≈4s · 竖屏832x1216 · Gemma3-fp4 + LTX22B蒸馏fp8",
+  "unet": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled_v2.safetensors",
+      "weight_dtype": "fp8_e4m3fn_fast"
+    }
+  },
+  "clip_loader": {
+    "class_type": "LTXAVTextEncoderLoader",
+    "inputs": {
+      "text_encoder": "gemma_3_12B_it_fp4_mixed.safetensors",
+      "ckpt_name": "ltx-2.3_text_projection_bf16.safetensors",
+      "device": "default"
+    }
+  },
+  "pos": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "女子在雪中庭院缓缓转身回眸，红色汉服衣袂轻扬，雪花缓缓飘落，唇角浅笑，电影质感，特写镜头，画面缓缓拉远",
+      "clip": ["clip_loader", 0]
+    }
+  },
+  "neg": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "模糊, 低质量, 变形, 人脸扭曲, 肢体异常, 水印, 文字",
+      "clip": ["clip_loader", 0]
+    }
+  },
+  "load_img": {
+    "class_type": "LoadImage",
+    "inputs": {"image": "char_snow.png"}
+  },
+  "vae_loader": {
+    "class_type": "VAELoader",
+    "inputs": {"vae_name": "LTX23_video_vae_bf16.safetensors"}
+  },
+  "img2video": {
+    "class_type": "LTXVImgToVideo",
+    "inputs": {
+      "positive": ["pos", 0],
+      "negative": ["neg", 0],
+      "vae": ["vae_loader", 0],
+      "image": ["load_img", 0],
+      "width": 832,
+      "height": 1216,
+      "length": 97,
+      "batch_size": 1,
+      "strength": 1.0
+    }
+  },
+  "scheduler": {
+    "class_type": "LTXVScheduler",
+    "inputs": {
+      "steps": 8,
+      "max_shift": 2.05,
+      "base_shift": 0.95,
+      "stretch": true,
+      "terminal": 0.1
+    }
+  },
+  "sampler_sel": {
+    "class_type": "KSamplerSelect",
+    "inputs": {"sampler_name": "euler"}
+  },
+  "sampler": {
+    "class_type": "SamplerCustom",
+    "inputs": {
+      "model": ["unet", 0],
+      "add_noise": true,
+      "noise_seed": 20260808,
+      "cfg": 1.0,
+      "positive": ["img2video", 0],
+      "negative": ["img2video", 1],
+      "sampler": ["sampler_sel", 0],
+      "sigmas": ["scheduler", 0],
+      "latent_image": ["img2video", 2]
+    }
+  },
+  "vae_decode": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": ["sampler", 0],
+      "vae": ["vae_loader", 0]
+    }
+  },
+  "create_video": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": ["vae_decode", 0],
+      "fps": 25.0
+    }
+  },
+  "save": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": ["create_video", 0],
+      "filename_prefix": "s05_ltx_demo",
+      "format": "mp4",
+      "codec": "h264"
+    }
+  }
+}

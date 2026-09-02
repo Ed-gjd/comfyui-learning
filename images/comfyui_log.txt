@@ -1,0 +1,205 @@
+## ComfyUI-Manager: installing dependencies done.
+[2026-08-08 05:44:42.885] ** ComfyUI startup time: 2026-08-08 05:44:42.885
+[2026-08-08 05:44:42.886] ** Platform: Linux
+[2026-08-08 05:44:42.886] ** Python version: 3.11.11 (main, Dec 11 2024, 16:28:39) [GCC 11.2.0]
+[2026-08-08 05:44:42.886] ** Python executable: /root/miniconda3/bin/python
+[2026-08-08 05:44:42.886] ** ComfyUI Path: /root/autodl-tmp/ComfyUI
+[2026-08-08 05:44:42.886] ** ComfyUI Base Folder Path: /root/autodl-tmp/ComfyUI
+[2026-08-08 05:44:42.886] ** User directory: /root/autodl-tmp/ComfyUI/user
+[2026-08-08 05:44:42.886] ** ComfyUI-Manager config path: /root/autodl-tmp/ComfyUI/user/default/ComfyUI-Manager/config.ini
+[2026-08-08 05:44:42.886] ** Log path: /root/autodl-tmp/ComfyUI/user/comfyui.log
+
+Prestartup times for custom nodes:
+[2026-08-08 05:44:43.842]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/rgthree-comfy
+[2026-08-08 05:44:43.842]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-Easy-Use
+[2026-08-08 05:44:43.843]    2.3 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-Manager
+[2026-08-08 05:44:43.843] 
+[2026-08-08 05:44:45.257] Checkpoint files will always be loaded safely.
+[2026-08-08 05:44:45.445] Total VRAM 32229 MB, total RAM 515597 MB
+[2026-08-08 05:44:45.446] pytorch version: 2.5.1+cu124
+[2026-08-08 05:44:46.882] xformers version: 0.0.29
+[2026-08-08 05:44:46.882] Set vram state to: NORMAL_VRAM
+[2026-08-08 05:44:46.882] Device: cuda:0 NVIDIA GeForce RTX 4080 SUPER : cudaMallocAsync
+[2026-08-08 05:44:46.893] Torch version too old to set sdpa backend priority.
+[2026-08-08 05:44:47.085] Using xformers attention
+[2026-08-08 05:44:48.681] Python version: 3.11.11 (main, Dec 11 2024, 16:28:39) [GCC 11.2.0]
+[2026-08-08 05:44:48.681] ComfyUI version: 0.3.62
+[2026-08-08 05:44:48.684] ComfyUI frontend version: 1.26.13
+[2026-08-08 05:44:48.685] [Prompt Server] web root: /root/miniconda3/lib/python3.11/site-packages/comfyui_frontend_package/static
+[2026-08-08 05:44:50.414] [34mFizzleDorf Custom Nodes: [92mLoaded[0m
+[2026-08-08 05:44:50.797] (pysssss:WD14Tagger) [DEBUG] Available ORT providers: AzureExecutionProvider, CPUExecutionProvider
+[2026-08-08 05:44:50.801] (pysssss:WD14Tagger) [DEBUG] Using ORT providers: CUDAExecutionProvider, CPUExecutionProvider
+[2026-08-08 05:44:51.681] ### Loading: ComfyUI-Inspire-Pack (V1.22)
+[2026-08-08 05:44:51.733] [36;20m[/root/autodl-tmp/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using ckpts path: /root/autodl-tmp/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts[0m
+[2026-08-08 05:44:51.734] [36;20m[/root/autodl-tmp/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
+[2026-08-08 05:44:51.734] [36;20m[/root/autodl-tmp/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
+[2026-08-08 05:44:51.743] /root/autodl-tmp/ComfyUI/custom_nodes/comfyui_controlnet_aux/node_wrappers/dwpose.py:26: UserWarning: DWPose: Onnxruntime not found or doesn't come with acceleration providers, switch to OpenCV with CPU device. DWPose might run very slowly
+  warnings.warn("DWPose: Onnxruntime not found or doesn't come with acceleration providers, switch to OpenCV with CPU device. DWPose might run very slowly")
+[2026-08-08 05:44:51.754] ### Loading: ComfyUI-Manager (V3.37)
+[2026-08-08 05:44:51.754] [ComfyUI-Manager] network_mode: public
+[2026-08-08 05:44:51.813] ### ComfyUI Revision: 4005 [bab8ba20] *DETACHED | Released on '2025-09-30'
+[2026-08-08 05:44:51.909] /root/miniconda3/lib/python3.11/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+[2026-08-08 05:44:51.958] /root/miniconda3/lib/python3.11/site-packages/timm/models/registry.py:4: FutureWarning: Importing from timm.models.registry is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+[2026-08-08 05:44:52.909] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2026-08-08 05:44:53.159] [34m[ComfyUI-Easy-Use] server: [0mv1.3.4 [92mLoaded[0m
+[2026-08-08 05:44:53.159] [34m[ComfyUI-Easy-Use] web root: [0m/root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-Easy-Use/web_version/v2 [92mLoaded[0m
+[2026-08-08 05:44:53.168] ### Loading: ComfyUI-Impact-Pack (V8.23)
+[2026-08-08 05:44:53.268] 
+----------------------------------------------------------------------------
+[Impact Pack] The SAM2 functionality is unavailable because the `facebook/sam2` dependency is not installed.
+
+Installation command:
+/root/miniconda3/bin/python -m pip install git+https://github.com/facebookresearch/sam2
+----------------------------------------------------------------------------
+
+[2026-08-08 05:44:53.327] 
+----------------------------------------------------------------------------
+[Impact Pack] The SAM2 functionality is unavailable because the `facebook/sam2` dependency is not installed.
+
+Installation command:
+/root/miniconda3/bin/python -m pip install git+https://github.com/facebookresearch/sam2
+----------------------------------------------------------------------------
+
+[2026-08-08 05:44:53.437] [Impact Pack] Wildcards loading done.
+[2026-08-08 05:44:53.644] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+[2026-08-08 05:44:53.762] [1;32m[Power Noise Suite]: 🦚🦚🦚 [93m[3mCock-a-doodle-dooo![0m 🦚🦚🦚
+[2026-08-08 05:44:53.762] [1;32m[Power Noise Suite]:[0m Tamed [93m11[0m wild nodes.
+[2026-08-08 05:44:53.772] ======================================== ComfyUI-nunchaku Initialization ========================================
+[2026-08-08 05:44:53.773] Nunchaku version: 1.0.0
+[2026-08-08 05:44:53.774] ComfyUI-nunchaku version: 1.0.1
+[2026-08-08 05:44:54.559] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2026-08-08 05:44:54.722] /root/miniconda3/lib/python3.11/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.8 (you have 1.4.15). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+[2026-08-08 05:44:54.803] 'nunchaku_versions.json' not found. Node will start in minimal mode.
+[2026-08-08 05:44:54.860] =================================================================================================================
+[2026-08-08 05:44:54.916] 
+[2026-08-08 05:44:54.916] [92m[rgthree-comfy] Loaded 48 fantastic nodes. 🎉[0m
+[2026-08-08 05:44:54.916] 
+[2026-08-08 05:44:54.935] [36mEfficiency Nodes:[0m Attempting to add Control Net options to the 'HiRes-Fix Script' Node (comfyui_controlnet_aux add-on)...[92mSuccess![0m
+[2026-08-08 05:44:55.105] [34mWAS Node Suite: [0mBlenderNeko's Advanced CLIP Text Encode found, attempting to enable `CLIPTextEncode` support.[0m
+[2026-08-08 05:44:55.108] [34mWAS Node Suite: [0m`CLIPTextEncode (BlenderNeko Advanced + NSP)` node enabled under `WAS Suite/Conditioning` menu.[0m
+[2026-08-08 05:44:55.520] [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
+[2026-08-08 05:44:55.613] [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/root/autodl-tmp/ComfyUI/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
+[2026-08-08 05:44:56.012] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m221[0m [32mnodes successfully.[0m
+[2026-08-08 05:44:56.017] 
+	[3m[93m"Do one thing every day that scares you."[0m[3m - Eleanor Roosevelt[0m
+[2026-08-08 05:44:56.017] 
+[2026-08-08 05:44:56.033] [92m[tinyterraNodes] [32mLoaded[0m
+[2026-08-08 05:44:58.092] 
+Import times for custom nodes:
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/websocket_image_save.py
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUi_NNLatentUpscale
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI_ADV_CLIP_emb
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/masquerade-nodes-comfyui
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-Coziness
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-Dev-Utils
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-TeaCache
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/Derfuu_ComfyUI_ModdedNodes
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/wavespeed
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/PowerNoiseSuite
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-Frame-Interpolation
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-WD14-Tagger
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/comfyui-browser
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-Advanced-ControlNet
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/rgthree-comfy
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-KJNodes
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/comfyui_controlnet_aux
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/efficiency-nodes-comfyui
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI_smZNodes
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/Comfyui-In-Context-Lora-Utils
+[2026-08-08 05:44:58.092]    0.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack
+[2026-08-08 05:44:58.092]    0.1 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper
+[2026-08-08 05:44:58.092]    0.1 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+[2026-08-08 05:44:58.093]    0.1 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-Manager
+[2026-08-08 05:44:58.093]    0.2 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI_FizzNodes
+[2026-08-08 05:44:58.093]    0.2 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/comfyui-ollama
+[2026-08-08 05:44:58.093]    0.3 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI_essentials
+[2026-08-08 05:44:58.093]    0.3 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
+[2026-08-08 05:44:58.093]    0.4 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI_BiRefNet_ll
+[2026-08-08 05:44:58.093]    0.5 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-AdvancedLivePortrait
+[2026-08-08 05:44:58.093]    0.6 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/comfyui_segment_anything
+[2026-08-08 05:44:58.093]    0.7 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-Easy-Use
+[2026-08-08 05:44:58.093]    1.1 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/was-node-suite-comfyui
+[2026-08-08 05:44:58.093]    1.1 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-nunchaku
+[2026-08-08 05:44:58.093]    2.0 seconds: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI_tinyterraNodes
+[2026-08-08 05:44:58.093] 
+[2026-08-08 05:44:58.224] Context impl SQLiteImpl.
+[2026-08-08 05:44:58.224] Will assume non-transactional DDL.
+[2026-08-08 05:44:58.225] No target revision found.
+[2026-08-08 05:44:58.242] Starting server
+
+[2026-08-08 05:44:58.242] To see the GUI go to: http://0.0.0.0:6006
+[2026-08-08 05:44:58.984] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2026-08-08 05:45:05.518] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2026-08-08 05:45:13.291] FETCH ComfyRegistry Data: 5/168
+[2026-08-08 05:45:21.958] FETCH ComfyRegistry Data: 10/168
+[2026-08-08 05:45:31.458] FETCH ComfyRegistry Data: 15/168
+[2026-08-08 05:45:39.847] FETCH ComfyRegistry Data: 20/168
+[2026-08-08 05:45:49.118] FETCH ComfyRegistry Data: 25/168
+[2026-08-08 05:45:57.969] FETCH ComfyRegistry Data: 30/168
+[2026-08-08 05:46:07.361] FETCH ComfyRegistry Data: 35/168
+[2026-08-08 05:46:15.379] FETCH ComfyRegistry Data: 40/168
+[2026-08-08 05:46:24.054] FETCH ComfyRegistry Data: 45/168
+[2026-08-08 05:46:33.176] FETCH ComfyRegistry Data: 50/168
+[2026-08-08 05:46:41.809] FETCH ComfyRegistry Data: 55/168
+[2026-08-08 05:46:50.850] FETCH ComfyRegistry Data: 60/168
+[2026-08-08 05:46:59.698] FETCH ComfyRegistry Data: 65/168
+[2026-08-08 05:47:08.231] FETCH ComfyRegistry Data: 70/168
+[2026-08-08 05:47:17.350] FETCH ComfyRegistry Data: 75/168
+[2026-08-08 05:47:26.575] FETCH ComfyRegistry Data: 80/168
+[2026-08-08 05:47:35.442] FETCH ComfyRegistry Data: 85/168
+[2026-08-08 05:47:44.580] FETCH ComfyRegistry Data: 90/168
+[2026-08-08 05:47:54.119] FETCH ComfyRegistry Data: 95/168
+[2026-08-08 05:48:03.067] FETCH ComfyRegistry Data: 100/168
+[2026-08-08 05:48:11.777] FETCH ComfyRegistry Data: 105/168
+[2026-08-08 05:48:20.814] FETCH ComfyRegistry Data: 110/168
+[2026-08-08 05:48:30.537] FETCH ComfyRegistry Data: 115/168
+[2026-08-08 05:48:39.547] FETCH ComfyRegistry Data: 120/168
+[2026-08-08 05:48:48.072] FETCH ComfyRegistry Data: 125/168
+[2026-08-08 05:48:56.421] FETCH ComfyRegistry Data: 130/168
+[2026-08-08 05:49:05.555] FETCH ComfyRegistry Data: 135/168
+[2026-08-08 05:49:14.703] FETCH ComfyRegistry Data: 140/168
+[2026-08-08 05:49:27.230] FETCH ComfyRegistry Data: 145/168
+[2026-08-08 05:49:36.597] FETCH ComfyRegistry Data: 150/168
+[2026-08-08 05:49:45.259] FETCH ComfyRegistry Data: 155/168
+[2026-08-08 05:49:54.887] FETCH ComfyRegistry Data: 160/168
+[2026-08-08 05:50:04.806] FETCH ComfyRegistry Data: 165/168
+[2026-08-08 05:50:11.184] FETCH ComfyRegistry Data [DONE]
+[2026-08-08 05:50:11.421] [ComfyUI-Manager] default cache updated: https://api.comfy.org/nodes
+[2026-08-08 05:50:11.489] FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json [DONE]
+[2026-08-08 05:50:13.900] [ComfyUI-Manager] All startup tasks have been completed.
+[2026-08-08 05:50:54.611] Disable Log Console. client id: 5aec8de6034040f5adfa007e8f4eba0a, console id: f19ea9eb-7585-4a69-a3c8-a9cdf174a4fb
+[2026-08-08 06:04:33.165] got prompt
+[2026-08-08 06:04:33.234] model weight dtype torch.float16, manual cast: None
+[2026-08-08 06:04:33.235] model_type EPS
+[2026-08-08 06:04:33.430] Using xformers attention in VAE
+[2026-08-08 06:04:33.431] Using xformers attention in VAE
+[2026-08-08 06:04:33.483] VAE load device: cuda:0, offload device: cpu, dtype: torch.bfloat16
+[2026-08-08 06:04:33.553] CLIP/text encoder model load device: cuda:0, offload device: cpu, current: cpu, dtype: torch.float16
+[2026-08-08 06:04:33.726] Requested to load SD1ClipModel
+[2026-08-08 06:04:33.833] loaded completely 30753.425 235.84423828125 True
+[2026-08-08 06:04:34.045] Requested to load BaseModel
+[2026-08-08 06:04:34.509] loaded completely 30391.58067779541 1639.406135559082 True
+[2026-08-08 06:04:36.091] 100%|██████████| 20/20 [00:01<00:00, 12.94it/s]
+[2026-08-08 06:04:36.092] Requested to load AutoencoderKL
+[2026-08-08 06:04:36.172] loaded completely 28472.3669090271 159.55708122253418 True
+[2026-08-08 06:04:36.395] Prompt executed in 3.23 seconds
+[2026-08-08 06:06:50.130] got prompt
+[2026-08-08 06:06:51.617] 100%|██████████| 22/22 [00:01<00:00, 15.80it/s]
+[2026-08-08 06:06:51.803] Prompt executed in 1.67 seconds
+[2026-08-08 06:06:53.999] got prompt
+[2026-08-08 06:06:55.352] 100%|██████████| 22/22 [00:01<00:00, 16.91it/s]100%|██████████| 22/22 [00:01<00:00, 16.81it/s]
+[2026-08-08 06:06:55.524] Prompt executed in 1.52 seconds
+[2026-08-08 06:06:57.930] got prompt
+[2026-08-08 06:06:59.271] 100%|██████████| 22/22 [00:01<00:00, 16.98it/s]100%|██████████| 22/22 [00:01<00:00, 17.10it/s]
+[2026-08-08 06:06:59.455] Prompt executed in 1.52 seconds
+[2026-08-08 06:07:02.318] got prompt
+[2026-08-08 06:07:03.639] 100%|██████████| 22/22 [00:01<00:00, 17.27it/s]100%|██████████| 22/22 [00:01<00:00, 17.38it/s]
+[2026-08-08 06:07:03.809] Prompt executed in 1.47 seconds
+[2026-08-08 06:07:26.835] got prompt
+[2026-08-08 06:07:28.175] 100%|██████████| 22/22 [00:01<00:00, 17.40it/s]100%|██████████| 22/22 [00:01<00:00, 17.29it/s]
+[2026-08-08 06:07:28.278] Prompt executed in 1.44 seconds
